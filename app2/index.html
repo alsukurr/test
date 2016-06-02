@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>app2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="containter">
+		<div class="section section1"></div>
+		<div class="section section2">
+			<div class="block block1">
+				<div class="img"></div>
+			</div>
+			<div class="block block2">
+				<h2>John Raymonds</h2>
+				<p>Your talent amazes! This is awesome.</p>
+				<p>Excited to see the final product.</p>
+			</div>
+		</div>
+		<div class="section section3">
+			<!-- using fontawesome icons to deliver the test quicker, eye icons don't match -->
+			<div class="block block1">
+				<i class="fa fa-eye fa-lg" aria-hidden="true"></i>172
+			</div>
+			<div class="block block2">
+				<i class="fa fa-comment fa-lg" aria-hidden="true"></i>34
+			</div>
+			<div class="block block3" id="heart">
+				<i class="fa fa-heart fa-lg" aria-hidden="true"></i><span class="click-count">209</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/4b2add828f.js"></script>
+
+<script>
+	// settig clicks to 209
+	var clicks = 209
+	// on click
+	$( "#heart" ).click(function() {
+	  $( this ).toggleClass( "red" );
+	  // if statement to display counted clicks
+	   if(clicks > 209) {
+	   		clicks--;
+	   		$('.click-count').html(clicks);
+	   } else {
+	   		clicks++;
+	   		$('.click-count').html(clicks);
+	   }
+	   console.log(clicks);
+	});
+</script>
+</html>

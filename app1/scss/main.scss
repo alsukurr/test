@@ -1,0 +1,90 @@
+@import 'reset';
+
+// typography
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+// mixins
+$grey: #8e8071;
+$border: #f6f0ec;
+$hover: #f8f3f0;
+$green: #54bc75;
+$red: #e26f4d;
+
+$responsive: 550px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+body {
+	height: 100vh;
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Open Sans, sans-serif;
+	background-color: #be7b68;
+}
+nav {
+	width: 100%;
+	max-width: 635px;
+	margin: 0 auto;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: #FFF;
+	margin: 0 auto;
+	margin-top: 40px;
+
+	@include media-query($responsive) {
+		flex-direction: column;
+	}
+}
+ 
+li {
+	flex: 1 1 auto;
+	text-align: center;
+	border-right: 1px solid $border;
+	border-bottom: 2px solid #fff; 
+	transition: 0.2s all ease-in-out;
+	a {	
+		padding: 15px;
+		display: block;
+		text-decoration: none;
+		color: $grey;
+		text-transform: uppercase;
+	}
+	&:last-of-type {
+		border-right: none;
+	}
+	&:hover {
+		background-color: $hover;
+		border-bottom: 2px solid $green;
+	}
+	i {
+		margin-right: 10px;
+	}
+	&:first-of-type a{
+		position: relative;
+		&:after {
+			position: absolute;
+			top: 4px;
+			content: attr(data-before);
+			font-size: 10px;
+			width: 15px;
+			height: 15px;
+			text-align: center;
+			padding-top: 2px;
+			border-radius: 50%;
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}

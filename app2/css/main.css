@@ -1,0 +1,176 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* line 6, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, ../scss/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, ../scss/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 51, ../scss/_reset.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 56, ../scss/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* line 62, ../scss/_reset.scss */
+body {
+  padding: 0;
+  margin: 0; }
+
+/* line 23, ../scss/main.scss */
+* {
+  transition: 0.2s all ease-in-out; }
+
+/* line 26, ../scss/main.scss */
+body {
+  height: 100vh;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #be7b68;
+  font-family: Open Sans, sans-serif; }
+
+/* line 34, ../scss/main.scss */
+.containter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px; }
+
+/* line 44, ../scss/main.scss */
+.section1 {
+  height: 200px;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/* line 50, ../scss/main.scss */
+.section2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFF; }
+  @media screen and (max-width: 320px) {
+    /* line 50, ../scss/main.scss */
+    .section2 {
+      flex-direction: column; } }
+  /* line 58, ../scss/main.scss */
+  .section2 .block {
+    padding: 10px; }
+  /* line 62, ../scss/main.scss */
+  .section2 .block1 {
+    flex: 1 1 auto; }
+    /* line 65, ../scss/main.scss */
+    .section2 .block1 .img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 1px solid #f8f3f0;
+      background: url("../img/profile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: inset 0px 0px 0px 6px #fff; }
+      /* line 75, ../scss/main.scss */
+      .section2 .block1 .img:hover {
+        box-shadow: inset 0px 0px 0px 4px #fff; }
+  /* line 80, ../scss/main.scss */
+  .section2 .block2 {
+    flex: 2 1 auto;
+    padding: 10px;
+    color: #8e8071; }
+    @media screen and (max-width: 320px) {
+      /* line 80, ../scss/main.scss */
+      .section2 .block2 {
+        text-align: center; } }
+    /* line 87, ../scss/main.scss */
+    .section2 .block2 h2 {
+      font-size: 20px;
+      font-weight: bolder;
+      margin-bottom: 10px; }
+    /* line 92, ../scss/main.scss */
+    .section2 .block2 p {
+      font-size: 13px;
+      line-height: 20px; }
+
+/* line 99, ../scss/main.scss */
+.section3 {
+  display: flex;
+  flex-direction: row; }
+  /* line 103, ../scss/main.scss */
+  .section3 .block {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #f6f1ed;
+    border-right: 1px solid #fff;
+    color: #b1a599; }
+    /* line 110, ../scss/main.scss */
+    .section3 .block:last-of-type {
+      border-right: none; }
+    /* line 113, ../scss/main.scss */
+    .section3 .block:hover {
+      background-color: #F4EAE1; }
+    /* line 116, ../scss/main.scss */
+    .section3 .block i {
+      margin-right: 10px; }
+
+/* line 122, ../scss/main.scss */
+.block3.red {
+  color: #e26f4d; }

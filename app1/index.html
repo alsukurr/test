@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>app1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<!-- using fontawesome icons to deliver the test quicker, account icons don't match -->
+			<li><a href="#"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>Check In</a></li>
+			<li><a href="#"><i class="fa fa-heart fa-lg" aria-hidden="true"></i>Events</a></li>
+			<li><a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i>Account</a></li>
+			<li><a href="#"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>Settings</a></li>
+		</ul>
+	</nav>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/4b2add828f.js"></script>
+
+<script>
+	// setting count to 0
+	var clicks = 0
+	// setting a:before to equal var clicks
+	$( "li:first a" ).attr('data-before', clicks);
+	// on click
+	$( "li:first a" ).click(function() {
+		clicks++;
+		$(this).attr('data-before', clicks);
+		console.log(clicks);
+	});
+</script>
+</html>

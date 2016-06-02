@@ -1,0 +1,124 @@
+@import 'reset';
+
+// typography
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+// mixins
+$grey: #8e8071;
+$border: #f6f0ec;
+$hover: #f8f3f0;
+$green: #54bc75;
+
+$grey-light: #f6f1ed;
+$grey-icons: #b1a599;
+$red: #e26f4d;
+
+$responsive: 320px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+* {
+	transition: 0.2s all ease-in-out;
+}
+body {
+	height: 100vh;
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #be7b68;
+	font-family: Open Sans, sans-serif;
+}
+.containter {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 370px;
+	border-radius: 6px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.section1 {
+	height: 200px;
+	background-image: url("../img/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.section2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #FFF;
+	@include media-query($responsive) {
+		flex-direction: column;
+	}
+	.block {
+		padding: 10px;
+	}
+	
+	.block1 {
+		flex: 1 1 auto;
+
+		.img {
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			border: 1px solid $hover;
+			background: url("../img/profile.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: inset 0px 0px 0px 6px #fff;
+
+			&:hover {
+				box-shadow: inset 0px 0px 0px 4px #fff;
+			}	
+		}
+	}
+	.block2 {
+		flex: 2 1 auto;
+		padding: 10px;
+		color: $grey;
+		@include media-query($responsive) {
+			text-align: center;
+		}
+		h2 {
+			font-size: 20px;
+			font-weight: bolder;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 13px;
+			line-height: 20px;
+		}
+	}
+}
+
+.section3 {
+	display: flex; 
+	flex-direction: row;
+
+	.block {
+		flex: 1 1 auto;
+		text-align: center;
+		padding: 10px;
+		background-color: $grey-light;
+		border-right: 1px solid #fff;
+		color: $grey-icons;
+		&:last-of-type {
+			border-right: none;
+		}
+		&:hover {
+			background-color: #F4EAE1;
+		}
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
+.block3.red {
+	color: $red;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:masonbraun/portfolio.git"
+  },
+  "author": "Alsu Kurbanova",
+  "devDependencies": {
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
